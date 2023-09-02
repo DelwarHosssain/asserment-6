@@ -16,14 +16,16 @@ const hanglerCatagore = async () => {
 const hendelAl = async (categoryId) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await response.json();
+    console.log(data.data);
 
     const cardContainer =document.getElementById('card-container')
     data.data.forEach((all) => {
         const div=document.createElement('div')
         div.innerHTML =`
         
-        <div class="card w-auto bg-base-100 shadow-xl">
-                <figure><img src="image/Icon.png" alt="Shoes" /></figure>
+        <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="${all?.thumbnail}
+                " alt="Shoes" /></figure>
                 <div class="card-body ">
                     <div class="flex justify-start">
                     <img class="w-12" src="image/download.jpg" alt="">  

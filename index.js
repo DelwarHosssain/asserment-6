@@ -7,39 +7,43 @@ const hanglerCatagore = async () => {
 
     data.data.forEach((category) => {
         const div = document.createElement('div');
-        div.innerHTML = `<button onclick ="hendelAl('${category.category_id}')">${category.category}</button>`;
+        div.innerHTML = `<button onclick ="hendelId('${category.category_id}')">${category.category}</button>`;
         tabContainer.appendChild(div);
     });
 
     console.log(data.data);
 };
-const hendelAl = async (categoryId) => {
+const hendelId = async (categoryId) => {
+    console.log('categoryId');
     const response = await fetch(` https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await response.json();
     console.log(data.data);
 
     const cardContainer =document.getElementById('card-container')
-    data.data.forEach((all) => {
+    data.data. forEach((all) => {
         const div=document.createElement('div')
         div.innerHTML =`
         
-        <div class="card w-96 h-96 bg-base-100 shadow-xl">
-                <figure><img src="${all?.thumbnail}
+        <div class="card  w-96 h-96 ">
+                <figure class=""><img src="${all?.thumbnail}
                 " alt="Shoes" /></figure>
                 <div class="card-body ">
                     <div class="flex  ">
-                    <div class="avatar">
-                            <div class="w-16 h-16 rounded-full ">
+                    <div class="avatar pr-5">
+                            <div class="w-8 h-8 rounded-full ">
                                 <img src="${all?.authors[0].profile_picture}" />
                             </div>
                         </div>
-                        <div>
-                        <h2 class=" p-5  font-extrabold text-center text-lg ">${all.title}</h2>
+                        <div >
+                        <h2 class=" font-extrabold text-center text-lg ">${all.title}</h2>
                         </div>
                     </div >
-                    <p class="font-normal text-sm text-[rgba(23, 23, 23, 0.70);]">${all?.authors[0].profile_name} <span><i class="fa-solid fa-handshake "></i></span></p>
+                    <div class="flex gap-1">
+                        <h2 class="font-normal text-sm text-[rgba(23, 23, 23, 0.70);]">${all?.authors[0].profile_name}<h2>
+                        <h3>${all.authors[0].verified ? all.authors[0].verified:"<img  src='image/vary.png'"}</h3>
+                    </div>
                     <div class="card-actions justify-star font-normal text-sm text-[rgba(23, 23, 23, 0.70);]">
-                    <h5>91K views</h5>
+                    <h5>${all.others.views}</h5>
                     </div>
                 </div>
             </div>
@@ -49,6 +53,7 @@ const hendelAl = async (categoryId) => {
 };
 
 hanglerCatagore();
+hendelId("01")
 
 
 // posted_date

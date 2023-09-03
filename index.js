@@ -19,6 +19,7 @@ const hanglerCatagore = async () => {
     const data = await response.json();
 
     const cardContainer =document.getElementById('card-container')
+    cardContainer.innerHTML ="";
     data.data. forEach((all) => {
         const div=document.createElement('div')
         div.innerHTML =`

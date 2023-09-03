@@ -7,26 +7,26 @@ const hanglerCatagore = async () => {
 
     data.data.forEach((category) => {
         const div = document.createElement('div');
-        div.innerHTML = `<button onclick ="hendelId('${category.category_id}')">${category.category}</button>`;
+        div.innerHTML = `<button class="btn1 " onclick ="hendelId('${category.category_id}')">${category.category}</button>`;
         tabContainer.appendChild(div);
     });
 
     console.log(data.data);
 };
-const hendelId = async (categoryId) => {
-    console.log('categoryId');
+    hendelId = async (categoryId) => {
+    console.log(categoryId);
     const response = await fetch(` https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data = await response.json();
-    console.log(data.data);
 
     const cardContainer =document.getElementById('card-container')
     data.data. forEach((all) => {
         const div=document.createElement('div')
         div.innerHTML =`
         
-        <div class="card  w-96 h-96 ">
+        <div class="card w-80 md:w-96  md:h-96 ">
                 <figure class=""><img src="${all?.thumbnail}
                 " alt="Shoes" /></figure>
+                <div>
                 <div class="card-body ">
                     <div class="flex  ">
                     <div class="avatar pr-5">
@@ -53,21 +53,4 @@ const hendelId = async (categoryId) => {
 };
 
 hanglerCatagore();
-hendelId("01")
-
-
-// posted_date
-// : 
-// "13885"
-// views
-// : 
-// "1.1K"
-// [[Prototype]]
-// : 
-// Object
-// thumbnail
-// : 
-// "https://i.ibb.co/NTncwqH/luahg-at-pain.jpg"
-// title
-// : 
-// "Laugh at My Pain"
+hendelId("1000");

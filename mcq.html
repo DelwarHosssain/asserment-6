@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phtube</title>
+    <!-- talwine- link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FONTAWOSME -->
+    <script src="https://kit.fontawesome.com/7c16cb23f4.js" crossorigin="anonymous"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    
+
+</head>
+<body class="container mx-auto">
+    <header>
+        <!-- navepart -->
+        <nav class=" text-center  md:flex justify-between lg:flex lg:justify-between my-10 md:px-7 ">
+            <div class="p-5 ">
+                <a href="index.html"><img class="m-auto" src="image/Logo.png" alt="logo here"></a>
+            </div>
+            <div class="p-5">
+                <a href="index.html"><button class="btn1">Home</button></a>
+            </div>
+            <div class="p-5">
+                <button class="btn1 bg-[red] text-white">Blog</button>
+            </div>
+        </nav>
+        <!-- hr-part -->
+        <hr class=" w-80 m-auto md:w-auto">
+
+        <main>
+            <div>
+                <div class="join join-vertical w-full">
+                    <div class="collapse collapse-arrow join-item border border-base-300">
+                      <input type="radio" name="my-accordion-4" checked="checked" /> 
+                      <div class="collapse-title text-4xl font-medium">
+                        <h1>Discuss the scope of var, let, and const?</h1>
+                      </div>
+                      <div class="collapse-content"> 
+                        <h3 class="font-bold text-2xl text-[red]">var:-</h3>
+                        <p><span class="font-extrabold text-lg">Function Scope:</span> Variables declared with var are function-scoped, meaning they are visible and accessible within the function in which they are defined.</p>
+                        <p><span class="font-extrabold text-lg">No Block Scope:</span> var does not have block-level scope, so it is not limited to the block in which it is defined.</p>
+                        <h3 class="font-bold text-2xl text-[red]">Let:-</h3>
+                        <p><span class="font-extrabold text-lg">Block Scope:</span>Variables declared with let have block-level scope, which means they are accessible only within the block in which they are defined, including nested blocks.</p>
+                        <p><span class="font-extrabold text-lg">Hoisting: </span> Like var, let variables are hoisted, but they are not initialized until the actual declaration. Accessing a let variable before its declaration results in a ReferenceError.</p>
+                        <h3 class="font-bold text-2xl text-[red]">const:-</h3>
+                        <p><span class="font-extrabold text-lg">No Block Scope:</span> Block Scope: Variables declared with const also have block-level scope, similar to let.</p>
+                        <p><span class="font-extrabold text-lg">Immutable Value:</span> 'const' variables are constants, and their values cannot be reassigned after their initial assignment. However, for objects and arrays declared with const, their properties or elements can still be modified.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border border-base-300">
+                      <input type="radio" name="my-accordion-4" /> 
+                      <div class="collapse-title text-4xl font-medium ">
+                        Tell us the use cases of null and undefined?
+                      </div>
+                      <div class="collapse-content"> 
+                        <h3 class="font-bold text-2xl text-[red]">'null':-</h3>
+                        <p><span class="font-extrabold text-lg">Intentional Absence of Value: </span> 'null' is typically used when you want to explicitly indicate that a variable or object property intentionally has no value or is empty.</p>
+                        <p><span class="font-extrabold text-lg">Comparisons:</span> You can use 'null' in comparisons to check if a value is explicitly absent. For example, you might check if a function returned null to indicate that it didn't find a result.
+                        </p>
+                        <h3 class="font-bold text-2xl text-[red]">'undefined':-</h3>
+                        <p><span class="font-extrabold text-lg">Uninitialized Variables: </span> ariables that are declared but have not been assigned a value are automatically set to 'undefined'.</p>
+                        <p><span class="font-extrabold text-lg">Function Parameters:</span>  If a function is called with fewer arguments than it expects, the missing parameters are set to 'undefined'.
+                        </p>
+                        <h3 class="font-bold text-2xl text-[red]">'undefined':-</h3>
+                        <p><span class="font-extrabold text-lg">Return Value: </span> nctions that do not return a value explicitly return 'undefined'.</p>
+                        <p><span class="font-extrabold text-lg">Function Parameters:</span>  If a function is called with fewer arguments than it expects, the missing parameters are set to 'undefined'.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border border-base-300">
+                      <input type="radio" name="my-accordion-4" /> 
+                      <div class="collapse-title text-4xl font-medium">
+                        What do you mean by REST API?
+                      </div>
+                      <div class="collapse-content"> 
+                        <p>A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </main>
+        
+    <!-- script area -->
+    <script src="index.js"></script>
+</body>
+</html>
+

@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FONTAWOSME -->
     <script src="https://kit.fontawesome.com/7c16cb23f4.js" crossorigin="anonymous"></script>
-    
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
         body{
@@ -27,21 +28,21 @@
     <header>
         <!-- navepart -->
         <nav class=" text-center  md:flex justify-between lg:flex lg:justify-between my-10 md:px-7 ">
-            <div class="p-5 w-">
+            <div class="p-5">
                 <a href="index.html"><img class="m-auto" src="image/Logo.png" alt="logo here"></a>
             </div>
             <div class="p-5">
-                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-md">Sort by view</button>
+                <button class="btn1" >Sort by view</button>
             </div>
             <div class="p-5">
-                <button class="btn bg-[#FF1F3D] text-white">Blog</button>
+                <a href="mcq.html"><button class="btn1 ">Blog</button></a>
             </div>
         </nav>
         <!-- hr-part -->
-        <hr>
+        <hr class=" w-80 m-auto md:w-auto">
         <!-- subnav-part -->
-        <div class=" flex justify-center  gap-5 md:3 my-10 " id="btn-container">
-            <div class="">
+        <div class=" flex justify-center  md:gap-5 md:3 my-10  " id="btn-container">
+            <div>
                 
             </div>
         </div>
@@ -49,7 +50,7 @@
     </header>
     <main>
         <!-- card area -->
-        <div id="card-container" class="grid  grid-cols-1 md:grid md:grid-cols-3  lg:grid lg:grid-cols-4 gap-10">
+        <div id="card-container"  class="grid  grid-cols-1 pl-10 md:pl-0 md:grid md:grid-cols-3  lg:grid lg:grid-cols-4 gap-10">
             <!-- <div class="flex"></div> -->
         </div>
     </main>
@@ -60,3 +61,4 @@
     <script src="index.js"></script>
 </body>
 </html>
+

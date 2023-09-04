@@ -92,7 +92,7 @@ hendelId = async (categoryId) => {
                 <div class="card  w-80 md:w-96 md:h-96">
                     <figure>
                     <div class="relative"><img src="${item?.thumbnail}" alt="" /></div>
-                    ${item.others.posted_date && `<div class=" w-42 h-7 p-4 text-white text-center   absolute left-[150px] top-[90px] bg-[#171717]">${returnDuration(item.others.posted_date)}</div>` }
+                    ${item.others.posted_date && `<div class=" w-42 h-5  text-white text-center   absolute right-[20px] top-[175px] bg-[#171717]">${returnDuration(item.others.posted_date)}</div>` }
                    
                     </figure>
                         <div class="card-body">

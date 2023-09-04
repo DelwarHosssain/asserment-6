@@ -19,7 +19,6 @@ const hanglerCatagore = async () => {
     }
 };
 
-
 const returnDuration=(posted_data)=>{
     const hours = Math.floor(posted_data / 3600);
     const remainingSeconds = posted_data % 3600;
